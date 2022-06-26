@@ -13,7 +13,6 @@ router.post("/register", async (req, res) => {
       process.env.SECRET_KEY
     ).toString(),
   });
-
   try {
     const user = await newUser.save();
     res.status(201).json(user);
